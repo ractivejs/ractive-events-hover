@@ -1,0 +1,12 @@
+{
+	"name": "ractive-events-hover",
+	"version": "0.1.0",
+	"author": "Rich Harris",
+	"main": "Ractive-events-hover.js",
+	"ignore": [
+		"**/.*",
+		"src",
+		"test",
+		"Gruntfile.js"
+	]
+}
