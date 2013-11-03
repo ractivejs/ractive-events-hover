@@ -5,7 +5,17 @@
 
 	Version 0.1.0.
 
-	<< description goes here... >>
+	The hover event provides a convenient way to trigger behaviours
+	when the user's mouse enters or leaves an element.
+
+	The `event` object passed to handlers has a `hover` property which
+	is `true` on mouseenter, `false` on mouseleave. (The mouseenter and
+	mouseleave events are proprietary Internet Explorer events, which
+	behave slightly differently to mouseover and mouseout. This plugin
+	simulates those events in other browsers.
+
+	Be aware that heavy use of hover interactions is generally considered
+	an anti-pattern, since it excludes mobile and tablet users.
 
 	==========================
 
@@ -26,7 +36,15 @@
 	    // the return value
 	    require( 'Ractive-events-hover' );
 
-	<< more specific instructions for this plugin go here... >>
+	Add a hover event in the normal fashion:
+
+	    <div on-hover='foo'>hover over me!</div>
+
+	Then add a handler:
+
+	    ractive.on( 'foo', function ( event ) {
+	      alert( event.hover ); // true on enter, false on leave
+	    });
 
 */
 
