@@ -3,7 +3,7 @@ Ractive.js hover event plugin
 
 *Find more Ractive.js plugins at [ractivejs.org/plugins](http://ractivejs.org/plugins)*
 
-[See the demo here.](TODO)
+[See the demo here.](http://ractivejs.github.io/Ractive-events-hover)
 
 Usage
 -----
@@ -22,7 +22,19 @@ Or, if you're using a module loader, require this module:
 require( 'Ractive-events-hover' );
 ```
 
-**plugin-specific instructions to go here...**
+Add a hover event in the normal fashion:
+
+```html
+<div on-hover='foo'>hover over me!</div>
+```
+
+Then add a handler:
+
+```js
+ractive.on( 'foo', function ( event ) {
+  alert( event.hover ); // true on enter, false on leave
+});
+```
 
 
 
