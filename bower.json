@@ -8,6 +8,7 @@
 	},
 	"ignore": [
 		".git/",
+		".*",
 		"demo/",
 		"grunt/",
 		"lib/",
