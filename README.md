@@ -3,7 +3,7 @@ Ractive.js hover event plugin
 
 *Find more Ractive.js plugins at [ractivejs.org/plugins](http://ractivejs.org/plugins)*
 
-[See the demo here.](http://ractivejs.github.io/Ractive-events-hover)
+[See the demo here.](http://ractivejs.github.io/ractive-events-hover)
 
 Usage
 -----
@@ -11,15 +11,15 @@ Usage
 Include this file on your page below Ractive, e.g:
 
 ```html
-<script src='lib/Ractive.js'></script>
-<script src='lib/Ractive-events-hover.js'></script>
+<script src='lib/ractive.js'></script>
+<script src='lib/ractive-events-hover.js'></script>
 ```
 
 Or, if you're using a module loader, require this module:
 
 ```js
 // requiring the plugin will 'activate' it - no need to use the return value
-require( 'Ractive-events-hover' );
+require( 'ractive-events-hover' );
 ```
 
 Add a hover event in the normal fashion:

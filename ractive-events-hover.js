@@ -3,7 +3,7 @@
 	ractive-events-hover
 	====================
 
-	Version <%= VERSION %>.
+	Version 0.1.1.
 
 	The hover event provides a convenient way to trigger behaviours
 	when the user's mouse enters or leaves an element.

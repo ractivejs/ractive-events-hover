@@ -1,12 +1,19 @@
 {
 	"name": "ractive-events-hover",
-	"version": "0.1.0",
+	"version": "0.1.1",
 	"author": "Rich Harris",
-	"main": "Ractive-events-hover.js",
+	"main": "ractive-events-hover.js",
+	"dependencies": {
+		"ractive": "~0.4.0"
+	},
 	"ignore": [
-		"**/.*",
-		"src",
-		"test",
-		"Gruntfile.js"
+		".git/",
+		".gitignore",
+		"*/*",
+		"*.json",
+		"Gruntfile.js",
+		"index.html",
+		"ractive-events-hover.min.js",
+		"README.md"
 	]
 }
