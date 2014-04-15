@@ -8,8 +8,12 @@
 	},
 	"ignore": [
 		".git/",
+		"demo/",
+		"grunt/",
+		"lib/",
+		"src/",
+		"test/",
 		".gitignore",
-		"*/*",
 		"*.json",
 		"Gruntfile.js",
 		"index.html",
