@@ -4,10 +4,6 @@ module.exports = {
 		dest: 'tmp/ractive-events-hover.js'
 	},
 	options: {
-		process: {
-			data: {
-				VERSION: '<%= pkg.version %>'
-			}
-		}
+		process: true
 	}
 };
