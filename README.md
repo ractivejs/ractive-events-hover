@@ -22,6 +22,13 @@ Or, if you're using a module loader, require this module:
 require( 'ractive-events-hover' );
 ```
 
+To get `ractive-events-hover.min.js` you can:
+
+- Use CDN: `//cdn.jsdelivr.net/ractive.events-hover/latest/ractive-events-hover.min.js`.
+- Use bower: `$ bower i ractive-events-hover`.
+- [Download the latest release](https://github.com/ractivejs/ractive-events-hover/releases/).
+- Clone the repo: `$ git clone https://github.com/ractivejs/ractive-events-hover.git`.
+
 Add a hover event in the normal fashion:
 
 ```html
