@@ -1,20 +1,17 @@
 {
-	"name": "ractive-events-hover",
-	"version": "0.1.1",
-	"author": {
-		"name": "Rich Harris"
-	},
-	"main": "ractive-events-hover.js",
-	"description": "Hover event plugin for Ractive.js",
-	"dependencies": {
-		"ractive": "~0.4.0"
-	},
-	"devDependencies": {
-		"grunt": "~0.4.1",
-		"grunt-contrib-concat": "~0.3.0",
-		"grunt-contrib-qunit": "~0.3.0",
-		"grunt-contrib-uglify": "~0.2.5",
-		"grunt-contrib-jshint": "~0.7.0",
-		"grunt-contrib-copy": "~0.4.1"
-	}
+  "name": "ractive-events-hover",
+  "version": "0.2.0",
+  "author": {
+    "name": "Rich Harris"
+  },
+  "main": "ractive-events-hover.js",
+  "description": "Hover event plugin for Ractive.js",
+  "devDependencies": {
+    "rollup": "^0.20.2",
+    "rollup-plugin-babel": "^1.0.0"
+  },
+  "scripts": {
+    "build": "rollup -c",
+    "prepublish": "npm run build"
+  }
 }

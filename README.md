@@ -1,53 +1,50 @@
-Ractive.js hover event plugin
-=============================
+# Ractive.js hover event plugin
 
 *Find more Ractive.js plugins at [ractivejs.org/plugins](http://ractivejs.org/plugins)*
 
 [See the demo here.](http://ractivejs.github.io/ractive-events-hover)
 
-Usage
------
+The hover event provides a convenient way to trigger behaviours when the user's mouse enters or leaves an element.
+
+The `event` object passed to handlers has a `hover` property which is `true` on mouseenter, `false` on mouseleave. (The mouseenter and mouseleave events are proprietary Internet Explorer events, which behave slightly differently to mouseover and mouseout. This plugin simulates those events in other browsers.
+
+Be aware that heavy use of hover interactions is generally considered an anti-pattern, since it excludes mobile and tablet users.
+
+
+## Usage
 
 Include this file on your page below Ractive, e.g:
 
 ```html
 <script src='lib/ractive.js'></script>
 <script src='lib/ractive-events-hover.js'></script>
+<script>
+  var ractive = new Ractive({
+    el: 'main',
+    template: `
+      <div on-hover='set("hovering", event.hover)'>
+        {{#if hovering}}hovering!{{else}}not hovering!{{/if}}
+      </div>`
+  });
+</script>
 ```
 
-Or, if you're using a module loader, require this module:
+Or, if you're using a module loader, explicitly attach the plugin to the instance:
 
 ```js
-// requiring the plugin will 'activate' it - no need to use the return value
-require( 'ractive-events-hover' );
-```
-
-To get `ractive-events-hover.min.js` you can:
-
-- Use CDN: `//cdn.jsdelivr.net/ractive.events-hover/latest/ractive-events-hover.min.js`.
-- Use bower: `$ bower i ractive-events-hover`.
-- [Download the latest release](https://github.com/ractivejs/ractive-events-hover/releases/).
-- Clone the repo: `$ git clone https://github.com/ractivejs/ractive-events-hover.git`.
-
-Add a hover event in the normal fashion:
-
-```html
-<div on-hover='foo'>hover over me!</div>
-```
-
-Then add a handler:
-
-```js
-ractive.on( 'foo', function ( event ) {
-  alert( event.hover ); // true on enter, false on leave
-});
+var ractive = new Ractive({
+  el: 'main',
+  template: `
+    <div on-hover='set("hovering", event.hover)'>
+      {{#if hovering}}hovering!{{else}}not hovering!{{/if}}
+    </div>`,
+  events: {
+    hover: require( 'ractive-events-hover' )
+  }
+})
 ```
 
 
+## License
 
-License
--------
-
-Copyright (c) 2013 Rich Harris. Licensed MIT
-
-Created with the [Ractive.js plugin template](https://github.com/RactiveJS/Plugin-template) for Grunt.
+Copyright (c) 2013-5 Rich Harris. Licensed MIT
