@@ -4,7 +4,7 @@
   "author": {
     "name": "Rich Harris"
   },
-  "main": "ractive-events-hover.js",
+  "main": "dist/ractive-events-hover.js",
   "description": "Hover event plugin for Ractive.js",
   "devDependencies": {
     "rollup": "^0.20.2",
