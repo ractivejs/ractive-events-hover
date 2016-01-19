@@ -1,17 +1,18 @@
 {
   "name": "ractive-events-hover",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "author": {
     "name": "Rich Harris"
   },
-  "main": "dist/ractive-events-hover.js",
+  "main": "dist/ractive-events-hover.umd.js",
+  "jsnext:main": "dist/ractive-events-hover.es6.js",
   "description": "Hover event plugin for Ractive.js",
   "devDependencies": {
     "rollup": "^0.20.2",
     "rollup-plugin-babel": "^1.0.0"
   },
   "scripts": {
-    "build": "rollup -c",
+    "build": "rollup -c -f es6 -o dist/ractive-events-hover.es6.js && rollup -c -f umd -o dist/ractive-events-hover.umd.js",
     "prepublish": "npm run build"
   }
 }
